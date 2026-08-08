@@ -1,0 +1,2173 @@
+/* ================= GLOBAL ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+body{
+    background:#ffffff;
+    color:#222;
+    overflow-x:hidden;
+}
+
+
+a{
+    text-decoration:none;
+}
+
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.nav-links{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:28px;
+
+    background:#ffffff;
+
+    padding:18px 40px;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.08);
+
+    position:sticky;
+    top:0;
+    z-index:999;
+
+}
+
+
+.nav-links > a{
+
+    color:#222;
+    font-size:15px;
+    font-weight:600;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+
+
+.nav-links > a::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-8px;
+    left:0;
+
+    width:0%;
+    height:3px;
+
+    background:#ff5722;
+
+    border-radius:20px;
+
+    transition:.3s;
+
+}
+
+
+
+.nav-links > a:hover{
+
+    color:#ff5722;
+    transform:translateY(-3px);
+
+}
+
+
+.nav-links > a:hover::after{
+
+    width:100%;
+
+}
+
+
+
+/* CALL BUTTON */
+
+
+.nav-actions{
+
+    margin-left:10px;
+
+}
+
+
+.call-btn{
+
+    background:#ff5722;
+
+    color:white!important;
+
+    padding:12px 22px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    box-shadow:
+    0 10px 25px rgba(255,87,34,.3);
+
+    transition:.3s;
+
+}
+
+
+
+.call-btn:hover{
+
+    transform:translateY(-4px);
+
+    background:#e64a19;
+
+}
+
+
+
+/* MENU BUTTON */
+
+
+.menu-toggle{
+
+    display:none;
+
+    background:#ff5722;
+
+    color:white;
+
+    border:none;
+
+    font-size:28px;
+
+    padding:8px 14px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 8px 20px rgba(255,87,34,.3);
+
+}
+
+
+
+/* ================= ABOUT HERO ================= */
+
+
+.about-hero{
+
+    min-height:90vh;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:80px 0;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #fff7f2,
+    #ffffff
+    );
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:50px;
+
+}
+
+
+
+/* LEFT */
+
+
+.about-tag{
+
+    display:inline-block;
+
+    background:#fff0e8;
+
+    color:#ff5722;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.about-left h1{
+
+    font-size:48px;
+
+    line-height:1.2;
+
+    color:#222;
+
+}
+
+
+
+.about-left h1 span{
+
+    display:block;
+
+    color:#ff5722;
+
+}
+
+
+
+.about-left p{
+
+    margin-top:25px;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    color:#555;
+
+}
+
+
+
+/* BUTTONS */
+
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:35px;
+
+}
+
+
+.hero-btn,
+.hero-btn2{
+
+    padding:14px 30px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+
+
+.hero-btn{
+
+    background:#ff5722;
+
+    color:white;
+
+}
+
+
+
+.hero-btn2{
+
+    border:2px solid #ff5722;
+
+    color:#ff5722;
+
+}
+
+
+
+.hero-btn:hover,
+.hero-btn2:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/* STATS */
+
+
+.hero-stats{
+
+    display:flex;
+
+    gap:40px;
+
+    margin-top:45px;
+
+}
+
+
+.hero-stats h2{
+
+    color:#ff5722;
+
+    font-size:35px;
+
+}
+
+
+
+.hero-stats span{
+
+    color:#666;
+
+}
+
+
+
+/* RIGHT IMAGE */
+
+
+.main-card{
+
+    position:relative;
+
+    width:380px;
+
+    height:380px;
+
+    margin:auto;
+
+}
+
+
+
+.main-card img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:10px solid white;
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.15);
+
+}
+
+
+
+/* FLOAT CARD */
+
+
+.floating-card{
+
+    position:absolute;
+
+    background:white;
+
+    padding:15px 22px;
+
+    border-radius:15px;
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.12);
+
+    font-weight:600;
+
+    animation:float 3s infinite;
+
+}
+
+
+
+.card1{
+
+    top:40px;
+    right:0;
+
+}
+
+
+.card2{
+
+    bottom:100px;
+    left:-30px;
+
+}
+
+
+.card3{
+
+    bottom:20px;
+    right:20px;
+
+}
+
+
+
+@keyframes float{
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+
+
+/* ================= MOBILE ================= */
+
+
+@media(max-width:900px){
+
+
+.menu-toggle{
+
+    display:block;
+
+    position:absolute;
+
+    right:20px;
+
+    top:15px;
+
+    z-index:2000;
+
+}
+
+
+
+.nav-links{
+
+    display:none;
+
+    flex-direction:column;
+
+    padding:90px 20px 30px;
+
+    gap:22px;
+
+}
+
+
+
+.nav-links.active{
+
+    display:flex;
+
+    animation:slideMenu .4s ease;
+
+}
+
+
+
+@keyframes slideMenu{
+
+from{
+
+opacity:0;
+transform:translateY(-20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+
+
+.about-grid{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+
+.about-left h1{
+
+    font-size:34px;
+
+}
+
+
+
+.about-left p{
+
+    font-size:15px;
+
+}
+
+
+
+.hero-buttons{
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.hero-stats{
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.main-card{
+
+    width:280px;
+
+    height:280px;
+
+}
+
+
+
+.floating-card{
+
+    display:none;
+
+}
+
+
+}
+
+/* =====================================================
+   OUR STORY SECTION
+===================================================== */
+
+
+.our-story{
+
+    padding:100px 0;
+
+    background:#ffffff;
+
+}
+
+
+
+.story-heading{
+
+    text-align:center;
+
+    max-width:800px;
+
+    margin:auto;
+
+}
+
+
+
+.story-heading span,
+.team-heading span{
+
+    color:#ff5722;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    font-size:14px;
+
+}
+
+
+
+.story-heading h2{
+
+    margin-top:15px;
+
+    font-size:42px;
+
+    line-height:1.3;
+
+    color:#222;
+
+}
+
+
+
+.story-heading p{
+
+    margin-top:20px;
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:16px;
+
+}
+
+
+
+
+/* STORY WRAPPER */
+
+
+.story-wrapper{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+
+
+/* LEFT BOX */
+
+
+.story-box{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    margin-bottom:25px;
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+    border-left:5px solid #ff5722;
+
+}
+
+
+
+.story-box:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.story-box h3{
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+    color:#222;
+
+}
+
+
+
+.story-box p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+
+
+/* ================= TIMELINE ================= */
+
+
+.timeline{
+
+    position:relative;
+
+    padding-left:40px;
+
+}
+
+
+
+.line{
+
+    position:absolute;
+
+    left:18px;
+
+    top:0;
+
+    width:3px;
+
+    height:100%;
+
+    background:#ff5722;
+
+}
+
+
+
+.timeline-item{
+
+    position:relative;
+
+    margin-bottom:50px;
+
+}
+
+
+
+.timeline .circle{
+
+    position:absolute;
+
+    left:-32px;
+
+    top:5px;
+
+    width:25px;
+
+    height:25px;
+
+    border-radius:50%;
+
+    background:#ff5722;
+
+    border:5px solid white;
+
+    box-shadow:
+
+    0 0 0 5px #ffe3d5;
+
+}
+
+
+
+.timeline .content{
+
+    background:#fff;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:
+
+    0 10px 35px rgba(0,0,0,.08);
+
+}
+
+
+
+.timeline h4{
+
+    color:#ff5722;
+
+    font-size:28px;
+
+}
+
+
+
+.timeline p{
+
+    color:#666;
+
+    margin-top:10px;
+
+}
+
+
+
+/* =====================================================
+   TEAM SECTION
+===================================================== */
+
+
+.team-section{
+
+    padding:100px 0;
+
+    background:#fff8f4;
+
+}
+
+
+
+.team-heading{
+
+    text-align:center;
+
+    max-width:750px;
+
+    margin:auto;
+
+}
+
+
+
+.team-heading h2{
+
+    margin-top:15px;
+
+    font-size:42px;
+
+    color:#222;
+
+}
+
+
+
+.team-heading p{
+
+    margin-top:20px;
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+
+
+/* TEAM GRID */
+
+
+.team-grid{
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+
+
+/* TEAM CARD */
+
+
+.team-card{
+
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+
+
+.team-card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+
+
+
+.team-img{
+
+    height:300px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.team-img img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+
+
+.team-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+/* SOCIAL ICON */
+
+
+.team-social{
+
+    position:absolute;
+
+    bottom:-60px;
+
+    left:0;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    transition:.4s;
+
+}
+
+
+
+.team-card:hover .team-social{
+
+    bottom:20px;
+
+}
+
+
+
+.team-social a{
+
+    width:40px;
+
+    height:40px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#ff5722;
+
+    color:white;
+
+    border-radius:50%;
+
+}
+
+
+
+
+.team-content{
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+
+
+.team-content h3{
+
+    font-size:22px;
+
+    color:#222;
+
+}
+
+
+
+.team-content span{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:#ff5722;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+
+
+.team-content p{
+
+    margin-top:15px;
+
+    color:#666;
+
+    line-height:1.7;
+
+    font-size:15px;
+
+}
+
+
+
+
+
+/* =====================================================
+   RESPONSIVE STORY + TEAM
+===================================================== */
+
+
+@media(max-width:1100px){
+
+
+.team-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+.story-wrapper{
+
+    gap:35px;
+
+}
+
+
+}
+
+
+
+@media(max-width:900px){
+
+
+.our-story,
+.team-section{
+
+    padding:70px 0;
+
+}
+
+
+
+.story-heading h2,
+.team-heading h2{
+
+    font-size:32px;
+
+}
+
+
+
+.story-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.timeline{
+
+    margin-top:30px;
+
+}
+
+
+
+.team-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.team-img{
+
+    height:300px;
+
+}
+
+
+}
+
+
+@media(max-width:500px){
+
+
+.story-heading h2,
+.team-heading h2{
+
+    font-size:26px;
+
+}
+
+
+
+.story-box{
+
+    padding:22px;
+
+}
+
+
+
+.timeline .content{
+
+    padding:18px;
+
+}
+
+
+
+.team-content{
+
+    padding:20px;
+
+}
+
+
+}
+/* =====================================================
+   BUSINESS SERVICES SECTION
+===================================================== */
+
+
+.business-services{
+
+    padding:100px 0;
+
+    background:#ffffff;
+
+}
+
+
+
+.section-title{
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:auto;
+
+}
+
+
+
+.section-title span{
+
+    color:#ff5722;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+
+
+.section-title h2{
+
+    margin-top:15px;
+
+    font-size:42px;
+
+    color:#222;
+
+    line-height:1.3;
+
+}
+
+
+
+.section-title p{
+
+    margin-top:20px;
+
+    color:#666;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+/* ================= SERVICE GRID ================= */
+
+
+.service-grid{
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+
+
+
+/* ================= SERVICE CARD ================= */
+
+
+.service-card{
+
+    background:#ffffff;
+
+    padding:35px 30px;
+
+    border-radius:28px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+
+    0 15px 45px rgba(0,0,0,.08);
+
+    transition:.4s ease;
+
+    border:1px solid #f5f5f5;
+
+}
+
+
+
+.service-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:#ff5722;
+
+    transform:scaleX(0);
+
+    transition:.4s;
+
+    transform-origin:left;
+
+}
+
+
+
+.service-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+
+
+
+.service-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+
+    0 25px 60px rgba(255,87,34,.15);
+
+}
+
+
+
+
+
+/* ICON */
+
+
+.service-card .icon{
+
+    width:75px;
+
+    height:75px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#fff1e9;
+
+    border-radius:22px;
+
+    font-size:35px;
+
+    margin-bottom:25px;
+
+    transition:.4s;
+
+}
+
+
+
+.service-card:hover .icon{
+
+    transform:rotate(8deg) scale(1.1);
+
+    background:#ff5722;
+
+}
+
+
+
+
+
+.service-card h3{
+
+    font-size:24px;
+
+    color:#222;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.service-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+
+
+
+
+/* SERVICE LIST */
+
+
+.service-card ul{
+
+    list-style:none;
+
+    margin-top:20px;
+
+}
+
+
+
+.service-card ul li{
+
+    margin-bottom:10px;
+
+    color:#444;
+
+    font-size:15px;
+
+    font-weight:500;
+
+}
+
+
+
+
+/* =====================================================
+   CTA STYLE (OPTIONAL)
+===================================================== */
+
+
+.about-cta{
+
+    margin:80px auto;
+
+    width:90%;
+
+    max-width:1100px;
+
+    padding:50px;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #ff5722,
+    #ff8a50
+    );
+
+    border-radius:35px;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+
+.about-cta h2{
+
+    font-size:40px;
+
+}
+
+
+
+.about-cta p{
+
+    margin:15px 0 30px;
+
+    font-size:17px;
+
+}
+
+
+
+.about-cta a{
+
+    display:inline-block;
+
+    background:white;
+
+    color:#ff5722;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+
+
+.about-cta a:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+
+/* =====================================================
+   ALL SECTIONS MOBILE
+===================================================== */
+
+
+@media(max-width:1100px){
+
+
+.service-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+}
+
+
+
+
+@media(max-width:900px){
+
+
+.business-services{
+
+    padding:70px 0;
+
+}
+
+
+
+.section-title h2{
+
+    font-size:32px;
+
+}
+
+
+
+.service-grid{
+
+    grid-template-columns:1fr;
+
+    gap:25px;
+
+}
+
+
+
+.service-card{
+
+    padding:30px 25px;
+
+}
+
+
+
+.about-cta{
+
+    padding:35px 20px;
+
+}
+
+
+
+.about-cta h2{
+
+    font-size:28px;
+
+}
+
+
+}
+
+
+
+
+@media(max-width:500px){
+
+
+
+.section-title h2{
+
+    font-size:26px;
+
+}
+
+
+
+.section-title p{
+
+    font-size:14px;
+
+}
+
+
+
+.service-card h3{
+
+    font-size:21px;
+
+}
+
+
+
+.service-card .icon{
+
+    width:65px;
+
+    height:65px;
+
+    font-size:30px;
+
+}
+
+
+
+}
+
+/* =====================================================
+   PART 4 : FINAL PREMIUM POLISH
+===================================================== */
+
+
+/* SMOOTH SCROLL */
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+
+/* TEXT SELECTION */
+
+::selection{
+
+    background:#ff5722;
+
+    color:white;
+
+}
+
+
+
+/* CUSTOM SCROLLBAR */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+::-webkit-scrollbar-track{
+
+    background:#fff4ef;
+
+}
+
+
+::-webkit-scrollbar-thumb{
+
+    background:#ff5722;
+
+    border-radius:20px;
+
+}
+
+
+
+/* =====================================================
+   HERO EXTRA EFFECTS
+===================================================== */
+
+
+.hero-circle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:#ff5722;
+
+    opacity:.08;
+
+    animation:circleMove 8s infinite alternate;
+
+}
+
+
+
+.c1{
+
+    width:250px;
+
+    height:250px;
+
+    top:-100px;
+
+    left:-100px;
+
+}
+
+
+.c2{
+
+    width:180px;
+
+    height:180px;
+
+    right:80px;
+
+    top:100px;
+
+}
+
+
+
+.c3{
+
+    width:120px;
+
+    height:120px;
+
+    bottom:100px;
+
+    left:40%;
+
+}
+
+
+
+.c4{
+
+    width:300px;
+
+    height:300px;
+
+    bottom:-150px;
+
+    right:-100px;
+
+}
+
+
+
+
+@keyframes circleMove{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+
+    to{
+
+        transform:translateY(40px);
+
+    }
+
+}
+
+
+
+
+
+/* =====================================================
+   IMAGE HOVER
+===================================================== */
+
+
+.main-card{
+
+    animation:imageFloat 5s infinite ease-in-out;
+
+}
+
+
+
+@keyframes imageFloat{
+
+
+0%,100%{
+
+    transform:translateY(0);
+
+}
+
+
+50%{
+
+    transform:translateY(-15px);
+
+}
+
+
+}
+
+
+
+
+/* =====================================================
+   BUTTON GLOW
+===================================================== */
+
+
+.hero-btn{
+
+    box-shadow:
+
+    0 12px 30px rgba(255,87,34,.25);
+
+}
+
+
+.hero-btn:hover{
+
+    box-shadow:
+
+    0 18px 40px rgba(255,87,34,.35);
+
+}
+
+
+
+
+
+/* =====================================================
+   CARD REVEAL EFFECT
+===================================================== */
+
+
+.story-box,
+.team-card,
+.service-card{
+
+
+    animation:fadeUp .8s ease both;
+
+}
+
+
+
+@keyframes fadeUp{
+
+
+from{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+/* =====================================================
+   IMAGE OVERLAY
+===================================================== */
+
+
+.team-img::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+    transparent,
+    rgba(0,0,0,.35)
+    );
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+
+
+.team-card:hover .team-img::after{
+
+    opacity:1;
+
+}
+
+
+
+
+
+/* =====================================================
+   NAVBAR MOBILE FINAL FIX
+===================================================== */
+
+
+@media(max-width:900px){
+
+
+.nav-links{
+
+    position:absolute;
+
+    top:65px;
+
+    left:0;
+
+    width:100%;
+
+    background:white;
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.12);
+
+}
+
+
+
+.nav-links a{
+
+    font-size:17px;
+
+}
+
+
+
+.nav-actions{
+
+    margin-top:10px;
+
+}
+
+
+
+.call-btn{
+
+    padding:13px 30px;
+
+}
+
+
+
+}
+
+
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+
+@media(max-width:480px){
+
+
+
+.container{
+
+    width:92%;
+
+}
+
+
+
+.about-hero{
+
+    padding:60px 0;
+
+}
+
+
+
+.about-left h1{
+
+    font-size:30px;
+
+}
+
+
+
+.hero-buttons a{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+
+
+.hero-stats{
+
+    gap:25px;
+
+}
+
+
+
+.hero-stats h2{
+
+    font-size:30px;
+
+}
+
+
+
+.main-card{
+
+    width:240px;
+
+    height:240px;
+
+}
+
+
+
+.floating-card{
+
+    display:none;
+
+}
+
+
+
+.story-box h3{
+
+    font-size:19px;
+
+}
+
+
+
+.service-card{
+
+    border-radius:22px;
+
+}
+
+
+
+}
+
+
+
+/* =====================================================
+   TABLET LANDSCAPE
+===================================================== */
+
+
+@media(min-width:901px) and (max-width:1200px){
+
+
+.about-left h1{
+
+    font-size:40px;
+
+}
+
+
+.main-card{
+
+    width:330px;
+
+    height:330px;
+
+}
+
+
+}
+
+
+
+
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+
+button,
+a{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+.about-right .main-card{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.about-right .main-card img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center top; /* ऊपर से कटने की समस्या ठीक करेगा */
+}
+.about-right .main-card{
+    height: 500px;
+}

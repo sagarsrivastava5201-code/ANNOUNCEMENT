@@ -1,0 +1,621 @@
+/* ================= NAVBAR ================= */
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:28px;
+    background:#fff;
+    padding:18px 40px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+
+/* Links */
+
+.nav-links > a{
+    position:relative;
+    text-decoration:none;
+    color:#222;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+}
+
+
+.nav-links > a:hover{
+    color:#ff5722;
+}
+
+
+/* underline */
+
+.nav-links > a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:3px;
+    background:#ff5722;
+    border-radius:10px;
+    transition:.3s;
+}
+
+
+.nav-links > a:hover::after{
+    width:100%;
+}
+
+
+/* Call Button */
+
+.nav-actions{
+    margin-left:15px;
+}
+
+
+.call-btn{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    background:#ff5722;
+    color:white !important;
+
+    padding:12px 22px;
+    border-radius:50px;
+
+    font-weight:700;
+    text-decoration:none;
+
+    box-shadow:0 8px 20px rgba(255,87,34,.35);
+
+    transition:.3s;
+}
+
+
+
+.call-btn:hover{
+
+    transform:translateY(-3px);
+    background:#e64a19;
+
+}
+
+
+/* Hamburger */
+
+.menu-toggle{
+
+    display:none;
+
+    background:#ff5722;
+    color:white;
+
+    border:none;
+
+    font-size:28px;
+
+    width:45px;
+    height:42px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+
+/* ================= MOBILE ================= */
+
+
+@media(max-width:900px){
+
+
+body{
+    overflow-x:hidden;
+}
+
+
+/* menu button */
+
+.menu-toggle{
+
+    display:block;
+
+    position:absolute;
+
+    right:20px;
+
+    top:18px;
+
+}
+
+
+
+/* navbar */
+
+.nav-links{
+
+    position:absolute;
+
+    top:78px;
+
+    left:0;
+
+    width:100%;
+
+    background:#fff;
+
+    display:none;
+
+    flex-direction:column;
+
+    gap:0;
+
+    padding:15px 0;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+
+}
+
+
+
+/* open menu */
+
+.nav-links.active{
+
+    display:flex;
+
+}
+
+
+/* links */
+
+.nav-links > a{
+
+    width:100%;
+
+    text-align:center;
+
+    padding:16px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+
+
+/* remove underline mobile */
+
+.nav-links > a::after{
+
+    display:none;
+
+}
+
+
+
+/* Call button center */
+
+.nav-actions{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    margin:15px 0;
+
+}
+
+
+
+.call-btn{
+
+    display:flex;
+
+    width:160px;
+
+    justify-content:center;
+
+}
+
+
+
+}
+
+
+/* small screen */
+
+@media(max-width:500px){
+
+.menu-toggle{
+
+right:15px;
+
+}
+
+}
+
+
+/* ==========================================
+        BOOKING PAGE DESIGN
+========================================== */
+
+
+.booking-area{
+
+    min-height:100vh;
+
+    padding:120px 20px 70px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    linear-gradient(
+    135deg,
+    #f5fff8,
+    #ffffff
+    );
+
+}
+
+
+
+/* Booking Card */
+
+.booking-card{
+
+    width:100%;
+
+    max-width:650px;
+
+    background:#ffffff;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 15px 45px rgba(0,0,0,.10);
+
+    border-top:5px solid #16a34a;
+
+}
+
+
+
+/* Heading */
+
+
+.booking-card h2{
+
+    text-align:center;
+
+    font-size:34px;
+
+    font-weight:800;
+
+    color:#111;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.booking-card h2::first-letter{
+
+    color:#16a34a;
+
+}
+
+
+
+.booking-card > p{
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:16px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+/* ==========================================
+        FORM INPUT
+========================================== */
+
+
+.input-group{
+
+    margin-bottom:22px;
+
+}
+
+
+
+.input-group label{
+
+    display:block;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#222;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+
+
+    width:100%;
+
+    padding:16px 18px;
+
+    border-radius:14px;
+
+    border:2px solid #e5e7eb;
+
+    outline:none;
+
+    font-size:16px;
+
+    color:#222;
+
+    background:#fff;
+
+    transition:.3s;
+
+}
+
+
+
+.input-group input::placeholder,
+.input-group textarea::placeholder{
+
+    color:#999;
+
+}
+
+
+
+/* Focus */
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus{
+
+
+    border-color:#16a34a;
+
+    box-shadow:
+
+    0 0 0 4px rgba(22,163,74,.15);
+
+
+}
+
+
+
+/* Textarea */
+
+
+.input-group textarea{
+
+    resize:none;
+
+    min-height:130px;
+
+}
+
+
+
+/* ==========================================
+        BOOK BUTTON
+========================================== */
+
+
+.book-btn{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #16a34a,
+    #059669
+    );
+
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:800;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.book-btn i{
+
+    font-size:23px;
+
+}
+
+
+
+.book-btn:hover{
+
+
+    transform:translateY(-4px);
+
+
+    box-shadow:
+
+    0 15px 30px rgba(22,163,74,.35);
+
+
+}
+
+
+
+/* ==========================================
+        NAVBAR GREEN THEME
+========================================== */
+
+
+header{
+
+
+    background:#ffffff;
+
+    border-bottom:3px solid #16a34a;
+
+}
+
+
+
+.logo i{
+
+    color:#16a34a;
+
+}
+
+
+
+#navMenu li a:hover{
+
+    color:#16a34a;
+
+}
+
+
+
+#navMenu li a::after{
+
+    background:#16a34a;
+
+}
+
+
+
+.top-btn{
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #16a34a,
+    #059669
+    );
+
+
+}
+
+
+
+/* ==========================================
+        MOBILE
+========================================== */
+
+
+@media(max-width:768px){
+
+
+    .booking-area{
+
+        padding:100px 15px 50px;
+
+    }
+
+
+
+    .booking-card{
+
+        padding:25px 18px;
+
+        border-radius:18px;
+
+    }
+
+
+
+    .booking-card h2{
+
+        font-size:28px;
+
+    }
+
+
+
+    .input-group input,
+    .input-group select,
+    .input-group textarea{
+
+        font-size:15px;
+
+        padding:14px;
+
+    }
+
+
+
+    .book-btn{
+
+        font-size:16px;
+
+        padding:16px;
+
+    }
+
+
+}

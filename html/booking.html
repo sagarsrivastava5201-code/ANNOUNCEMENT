@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Announcement Booking | Online Booking</title>
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+<!-- CSS -->
+<link rel="stylesheet" href="../css/booking.css">
+
+</head>
+
+
+<button class="menu-toggle" id="menuToggle">
+☰
+</button>
+
+
+<nav class="nav-links" id="navLinks">
+
+<a href="index.html">Home</a>
+<a href="#samples">Samples</a>
+<a href="#products">Products</a>
+<a href="booking.html">Book Announcement</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="service.html">Rafi Sound Service</a>
+
+
+<div class="nav-actions">
+
+<a href="tel:+919336771353" class="call-btn">
+📞 Call Now
+</a>
+
+</div>
+
+</nav>
+
+<!-- ================= BOOKING FORM ================= -->
+
+<div class="booking-area" id="booking">
+
+<div class="booking-card">
+
+<h2>
+📢 Booking करें
+</h2>
+
+<p>
+अपनी जानकारी भरें और Announcement तैयार करवाएं
+</p>
+
+
+<form id="bookingForm">
+
+
+<!-- Name -->
+
+<div class="input-group">
+
+<label>
+👤 Name / नाम
+</label>
+
+<input 
+type="text"
+id="name"
+placeholder="अपना नाम लिखें"
+required>
+
+</div>
+
+
+
+<!-- Mobile -->
+
+<div class="input-group">
+
+<label>
+📱 Mobile Number / मोबाइल नंबर
+</label>
+
+<input 
+type="tel"
+id="phone"
+placeholder="अपना मोबाइल नंबर डालें"
+maxlength="10"
+required>
+
+</div>
+
+
+
+
+<!-- City -->
+
+<div class="input-group">
+
+<label>
+📍 City / शहर
+</label>
+
+<input 
+type="text"
+id="city"
+placeholder="अपना शहर लिखें"
+required>
+
+</div>
+
+
+
+
+
+<!-- Announcement Type -->
+
+<div class="input-group">
+
+<label>
+📢 Announcement Type / घोषणा का प्रकार
+</label>
+
+
+<select id="type" required>
+
+<option value="">
+चुनें
+</option>
+
+<option>
+दुकान उद्घाटन
+</option>
+
+<option>
+नई दुकान / नई शाखा उद्घाटन
+</option>
+
+<option>
+जन्मदिन की घोषणा
+</option>
+
+<option>
+विवाह समारोह की घोषणा
+</option>
+
+<option>
+ऑफर / प्रचार घोषणा
+</option>
+
+<option>
+स्कूल / कोचिंग प्रचार
+</option>
+
+<option>
+धार्मिक कार्यक्रम
+</option>
+
+<option>
+चुनाव प्रचार
+</option>
+
+<option>
+अन्य
+</option>
+
+</select>
+
+
+</div>
+
+
+
+
+
+<!-- Message -->
+
+<div class="input-group">
+
+<label>
+📝 Message / क्या बोलना है?
+</label>
+
+
+<textarea
+id="script"
+rows="5"
+placeholder="अपना Announcement Message लिखें..."
+required></textarea>
+
+
+</div>
+
+
+
+
+
+<!-- Delivery -->
+
+<div class="input-group">
+
+<label>
+🎧 Delivery / Audio कहाँ चाहिए?
+</label>
+
+
+<select id="delivery">
+
+<option>
+WhatsApp पर
+</option>
+
+<option>
+Memory Card में
+</option>
+
+<option>
+Shop से लेना है
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+<button 
+type="submit"
+class="book-btn">
+
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Booking करें
+
+
+</button>
+
+
+
+</form>
+
+
+</div>
+
+</div>
+
+<!-- Javascript -->
+
+<script src="../js/booking.js"></script>
+
+
+</body>
+
+</html>
