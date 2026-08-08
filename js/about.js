@@ -1,34 +1,37 @@
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-
-menuToggle.onclick = ()=>{
-    navLinks.classList.toggle("active");
-};
-
 document.addEventListener("DOMContentLoaded", () => {
-  const counters = document.querySelectorAll("h2");
 
-  counters.forEach(counter => {
-    const target = parseInt(counter.textContent.replace(/\D/g, ""));
-    const suffix = counter.textContent.replace(/[0-9]/g, ""); // + आदि
+    const counters = document.querySelectorAll("h2");
 
-    let count = 1;
-    const duration = 2000; // 2 सेकंड
-    const increment = Math.max(1, Math.ceil(target / (duration / 16)));
+    counters.forEach(counter => {
 
-    counter.textContent = count + suffix;
+        const text = counter.textContent.trim();
+        const target = parseInt(text.replace(/\D/g, ""));
+        const suffix = text.includes("+") ? "+" : "";
 
-    const updateCounter = () => {
-      count += increment;
+        let start = 1;
+        const duration = 2000; // 2 seconds
+        const startTime = performance.now();
 
-      if (count >= target) {
-        counter.textContent = target + suffix;
-      } else {
-        counter.textContent = count + suffix;
-        requestAnimationFrame(updateCounter);
-      }
-    };
+        function animate(currentTime) {
 
-    requestAnimationFrame(updateCounter);
-  });
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+
+            // Smooth animation
+            const current = Math.floor(
+                start + (target - start) * progress
+            );
+
+            counter.textContent = current + suffix;
+
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            } else {
+                counter.textContent = target + suffix;
+            }
+        }
+
+        requestAnimationFrame(animate);
+    });
+
 });
